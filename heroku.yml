@@ -2,7 +2,7 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: npm start
+  web: node start
 env:
   MONGODB_URI: mongodb+srv://kiran:PandaDog911!@circa720.dkp4n.mongodb.net/?retryWrites=true&w=majority
   JWT_SECRET: 70AE754EBFD5CCD965967881AA0FDD26CC49DC01B55F4FA82AA430C860ACD77A
@@ -20,7 +20,7 @@ env:
   FACEBOOK_CLIENT_SECRET: e124a78597f46a9e1ce3fdf5cada2b4a
   FACEBOOK_CALLBACK_URL: auth/facebook/callback
   BASE_CLIENT_URL: https://circa720.herokuapp.com/
-  BASE_SERVER_URL: https://circa720.herokuapp.com/
+  BASE_SERVER_URL: http://localhost:3000/
   BASE_API_URL: api
   AWS_ACCESS_KEY_ID: AKIA6QSV3LMYSCGR5DBY
   AWS_SECRET_ACCESS_KEY: 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
