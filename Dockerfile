@@ -1,5 +1,6 @@
 # Use an official Node.js runtime as a parent image
-FROM node:14
+FROM node:14.x
+ENV NODE_ENV production
 
 # Set the working directory to /app
 WORKDIR /app
@@ -17,4 +18,4 @@ COPY . .
 EXPOSE 3000
 
 # Start the app
-CMD ["npm", "start"]
+CMD ["node", "start"]
