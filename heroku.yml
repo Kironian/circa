@@ -19,8 +19,8 @@ env:
   FACEBOOK_CLIENT_ID: 761325865563124
   FACEBOOK_CLIENT_SECRET: e124a78597f46a9e1ce3fdf5cada2b4a
   FACEBOOK_CALLBACK_URL: auth/facebook/callback
-  BASE_CLIENT_URL: http://localhost:8080
-  BASE_SERVER_URL: http://localhost:3000
+  BASE_CLIENT_URL: https://circa720.herokuapp.com/
+  BASE_SERVER_URL: https://circa720.herokuapp.com/
   BASE_API_URL: api
   AWS_ACCESS_KEY_ID: AKIA6QSV3LMYSCGR5DBY
   AWS_SECRET_ACCESS_KEY: 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
