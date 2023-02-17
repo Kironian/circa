@@ -1,16 +1,20 @@
-# Sets the base image of the application to the node’s official image.
-FROM node:17
+# Use an official Node.js runtime as a parent image
+FROM node:14
 
-# Sets the Working Directory as "/server"
-WORKDIR /server
-# Copies the package.json file into "/server" and runs npm i
-COPY package.json /server
-RUN npm i
-# Copies the entire source code into "/server"
-COPY . /server
+# Set the working directory to /app
+WORKDIR /app
 
-# Specifies the port the node app will be running on
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
+
+# Install app dependencies
+RUN npm install
+
+# Copy the rest of the application code to the working directory
+COPY . .
+
+# Expose the port that the app will listen on
 EXPOSE 3000
 
-# Runs "node server.js" after the above step is completed
-CMD ["node", "server.js"]
+# Start the app
+CMD ["npm", "start"]
